@@ -1,0 +1,47 @@
+{
+  "data": [
+    {
+      "rh": 61,
+      "pod": "d",
+      "lon": -77.03,
+      "pres": 1006.6,
+      "timezone": "America/New_York",
+      "ob_time": "2020-09-13 20:30",
+      "country_code": "US",
+      "clouds": 25,
+      "ts": 1600029000,
+      "solar_rad": 578.6,
+      "state_code": "DC",
+      "city_name": "Washington, D.C.",
+      "wind_spd": 8,
+      "wind_cdir_full": "south",
+      "wind_cdir": "S",
+      "slp": 1016.6,
+      "vis": 3.1,
+      "h_angle": 38.6,
+      "sunset": "23:18",
+      "dni": 819.6,
+      "dewpt": 64.3,
+      "snow": 0,
+      "uv": 5.16253,
+      "precip": 0,
+      "wind_dir": 174,
+      "sunrise": "10:48",
+      "ghi": 582.8,
+      "dhi": 101.25,
+      "aqi": 49,
+      "lat": 38.9,
+      "weather": {
+        "icon": "c01d",
+        "code": 800,
+        "description": "Clear sky"
+      },
+      "datetime": "2020-09-13:20",
+      "temp": 79,
+      "station": "WASD2",
+      "elev_angle": 36.55,
+      "app_temp": 79.4
+    }
+  ],
+  "count": 1
+}
