@@ -1,20 +1,29 @@
 package com.akul.uwueather
 
-import android.content.Context
 import com.beust.klaxon.JsonArray
 import com.beust.klaxon.JsonObject
 import com.beust.klaxon.Parser
 import com.beust.klaxon.lookup
+import kotlin.text.StringBuilder
 
-class Repo(context: Context) {
+class Repo {
 
+    private val currentWeatherJson = "{" +
+        " \"data\": [" +
+            "{" +
+                "\"temp\" : 79, " +
+                "\"weather\": {" +
+                    "\"description\": \"Clear sky\"" +
+                "}" +
+            "}" +
+        "]" +
+    "}"
 
-    fun loadCurrentWeather(context: Context): WeatherModel {
+    fun loadCurrentWeather(): WeatherModel {
         //convert JSON file to deserializable string
-        val currentWeatherJson = context.assets.open("weather.json").bufferedReader().use {
-            it.readText()
-        }
-
+//        val currentWeatherJson = context.assets.open("weather.json").bufferedReader().use {
+//            it.readText()
+//        }
         //build JSON from generated string
         val stringBuilder: StringBuilder = StringBuilder(currentWeatherJson)
         val parser: Parser = Parser.default()

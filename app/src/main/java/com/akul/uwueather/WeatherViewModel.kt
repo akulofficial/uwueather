@@ -1,16 +1,19 @@
 package com.akul.uwueather
 
-import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.MutableLiveData
 
-class WeatherViewModel(
-    val context: Context,
-    val temp: MutableLiveData<Int>,
-    val summary: MutableLiveData<String>) : ViewModel() {
+class WeatherViewModel(): ViewModel() {
+
+    val temp: MutableLiveData<Int> by lazy {
+        MutableLiveData<Int>()
+    }
+    val summary: MutableLiveData<String> by lazy {
+        MutableLiveData<String>()
+    }
 
     init {
-        val currentWeather: WeatherModel = Repo(context).loadCurrentWeather(context)
+        val currentWeather: WeatherModel = Repo().loadCurrentWeather()
         summary.value = currentWeather.summary
         temp.value = currentWeather.temp
     }
