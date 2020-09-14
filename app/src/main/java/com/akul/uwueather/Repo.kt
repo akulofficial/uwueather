@@ -5,9 +5,9 @@ import com.beust.klaxon.JsonArray
 import com.beust.klaxon.JsonObject
 import com.beust.klaxon.Parser
 import com.beust.klaxon.lookup
-import java.io.IOException
 
-class Repo {
+class Repo(context: Context) {
+
 
     fun loadCurrentWeather(context: Context): WeatherModel {
         //convert JSON file to deserializable string
