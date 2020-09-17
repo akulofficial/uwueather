@@ -16,14 +16,25 @@ class MainActivity : AppCompatActivity() {
         //observer that updates UI
         val tempObserver = Observer<Int> {newTemp ->
             //update UI
-            text_view.text = newTemp.toString()
+            temp_text_view.text = newTemp.toString()
+        }
+
+        val summaryObserver = Observer<String> { newSummary ->
+            summary_text_view.text = newSummary
+        }
+
+        val locationObserver = Observer<String> {newLocation ->
+            location_text_view.text = newLocation
         }
 
         model.temp.observe(this, tempObserver)
+        model.summary.observe(this, summaryObserver)
+        model.location.observe(this, locationObserver)
 
         main_button.setOnClickListener {
-            val anotherTemp = 100
-            model.temp.setValue(anotherTemp)
+            model.temp.setValue(3)
+            model.summary.setValue("fuck this shit, I'm out")
+            model.location.setValue("uwu land, uwu")
         }
     }
 }

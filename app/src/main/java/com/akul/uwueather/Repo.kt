@@ -11,6 +11,8 @@ class Repo {
     private val currentWeatherJson = "{" +
         " \"data\": [" +
             "{" +
+                "\"lon\" : -77.03, " +
+                "\"lat\": 38.9, " +
                 "\"temp\" : 79, " +
                 "\"weather\": {" +
                     "\"description\": \"Clear sky\"" +
@@ -35,7 +37,9 @@ class Repo {
         //extract needed values for model object
         val temp: Int = data.int("temp")[0] as Int
         val summary: String = data.obj("weather").string("description")[0] as String
+        val lat: Double = data.double("lat")[0] as Double
+        val lon: Double = data.double("lon")[0] as Double
 
-        return WeatherModel(summary, temp)
+        return WeatherModel(summary, temp, lat, lon)
     }
 }

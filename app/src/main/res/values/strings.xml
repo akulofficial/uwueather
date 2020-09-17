@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">uwueather</string>
     <string name="button_name">Button</string>
+    <string name="temp_text_view_string">temp</string>
+    <string name="summary_text_view_string">summary</string>
+    <string name="location_text_view_string">location</string>
 </resources>
